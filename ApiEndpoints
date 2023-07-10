@@ -1,0 +1,78 @@
+to install the libraries: 
+npm install
+
+-> to create a supersuer in django: 
+python3 manage.py createsuperuser
+username: admin
+password: admin
+
+endpoint for the admin panel:
+http://127.0.0.1:8000/admin/
+
+
+to run the server: 
+-> cd to backend folder
+-> type python3 manage.py runserver
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+                            ENDPOINTS:
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+1. 
+POST request: 
+To add a new Question to the database : 
+endpoint: http://127.0.0.1:8000/insert-questions/
+
+data insert format: 
+{
+    'question': '123456',
+    'subject': 'cse'
+}
+--------------------------------------------------
+
+2. 
+GET REQUEST
+get all the questions from the database : 
+endpoint: http://127.0.0.1:8000/get-questions/
+
+data returned in the following format: 
+{'question': '123456', 'subject': 'cse'}
+
+--------------------------------------------------
+3. 
+POST request:
+insert the answers to the database : 
+endpoint: http://127.0.0.1:8000/insert-answers/
+
+data insert format: 
+{
+    'question': '123456',
+    'subject': 'cse',
+    'answer':'789465',
+}
+
+---------------------------------------------------
+4. 
+POST request:
+insert the grades to the database : 
+endpoint: http://127.0.0.1:8000/insert-grades/
+
+data insert format: 
+{
+    'question': '123456',
+    'subject': 'cse',
+    'answer':'789465',
+    'grade': 'A'
+}
+----------------------------------------------------
+5.
+GET REQUEST 
+get the grades table from database : 
+endpoint: http://127.0.0.1:8000/get-grades/
+
+data returned as follows: 
+{'question': '123456', 'subject': 'cse', 'answer': '789456', 'grade': 'A'}
+
+----------------------------------------------------------------------------
